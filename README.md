@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 # programing-and-algorithm
 
+<<<<<<< HEAD
 Назви файлів створюються наступним чином:
 x_x_Nazaruk.file
 де перший x це номер лабораторної
