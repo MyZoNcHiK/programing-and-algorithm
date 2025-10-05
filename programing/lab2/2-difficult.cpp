@@ -12,21 +12,24 @@ void NumN(int N){
             cout << endl;
         }
         int pos = N-1;
-        while(pos>=0 && a[pos] == 10-(N-pos))
-            pos--;
-            if(pos < 0) {break;}
+        while(pos>=0 && a[pos] == 10-(N-pos))pos--;
+        if(pos < 0) {break;}
 
-            a[pos]++;
-            for(int i = pos + 1; i < N; i++) {
-                a[i] = a[i-1] +1;
-            }
+        a[pos]++;
+        for(int i = pos + 1; i < N; i++) {
+            a[i] = a[i-1] +1;
+        }
     }
-        
+
 }
 
 int main(){
-   int N;
-   cin>>N;
-   NumN(N);
-   return 0; 
+    int N;
+    cin>>N;
+    if(N>=10||N<=0){
+        cout << "З таким N умова задачі нездійсненна(0<N<10)" << endl;
+    } else {
+        NumN(N);
+    }
+    return 0; 
 }
