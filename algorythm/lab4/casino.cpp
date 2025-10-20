@@ -1,5 +1,7 @@
 #include<iostream>
 #include<random>
+#include<thread>
+#include<chrono>
 using namespace std;
 int randomNum(int min, int max){
     static random_device seed; //отримує випадкове зерно яке генерується випадковими бітами в системі(наскільки я зрозумів)
@@ -36,8 +38,24 @@ int findNumber(int bal){
         return bal;
     }
 }
+int roll(){
+    int r;
+    for(int i=0; i<0; i++){
+        r = randomNum(1, 10);
+        cout << "\r" << r << flush;
+        this_thread::sleep_for(chrono::milliseconds(200));
+    }
+    cout << r;
+    return r;
+}
 int gameMachine(int bal){
-    
+    bal -= 50;     
+    int first = roll();
+    cout << " ";
+    int second = roll();
+    cout << " ";
+    int third = roll();
+    cout << endl;
     return bal;
 }
 int rummy(int bal){
