@@ -38,17 +38,25 @@ int findNumber(int bal){
         return bal;
     }
 }
-void roll(){
+int roll(){
     int r;
     for(int i=0; i<0; i++){
         r = randomNum(1, 10);
         cout << "\r" << r << flush;
         this_thread::sleep_for(chrono::milliseconds(200));
     }
+    cout << r;
+    return r;
 }
 int gameMachine(int bal){
+    int q = randomNum(1, 10);
+    cout << q << endl;
     bal -= 50;     
-    roll();
+    int first = roll();
+    cout << " ";
+    int second = roll();
+    cout << " ";
+    int third = roll();
     return bal;
 }
 int rummy(int bal){
