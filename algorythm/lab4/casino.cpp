@@ -1,13 +1,13 @@
 #include<iostream>
-#include<random>
+#include<cstdlib>
+#include<ctime>
 #include<thread>
 #include<chrono>
 using namespace std;
 int randomNum(int min, int max){
-    static random_device seed; //отримує випадкове зерно яке генерується випадковими бітами в системі(наскільки я зрозумів)
-    static mt19937 generate(seed()); // генератор випадкового числа з зерна, в назві mt це Marsenne Twister, а 19937 це період генератора в бітах(таку назву вигадав не я)
-    uniform_int_distribution<> dist(min, max); //діапазон, який чомусь задається окремим класом під кожен тип даних
-    return dist(generate);
+    srand(time(0));
+    int r = min + rand() % max;
+    return r;
 }
 int findNumber(int bal){
     bal -= 50;
@@ -38,24 +38,17 @@ int findNumber(int bal){
         return bal;
     }
 }
-int roll(){
+void roll(){
     int r;
     for(int i=0; i<0; i++){
         r = randomNum(1, 10);
         cout << "\r" << r << flush;
         this_thread::sleep_for(chrono::milliseconds(200));
     }
-    cout << r;
-    return r;
 }
 int gameMachine(int bal){
     bal -= 50;     
-    int first = roll();
-    cout << " ";
-    int second = roll();
-    cout << " ";
-    int third = roll();
-    cout << endl;
+    roll();
     return bal;
 }
 int rummy(int bal){
