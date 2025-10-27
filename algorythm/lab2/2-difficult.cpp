@@ -10,11 +10,11 @@ int main() {
     cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 
     float A = S(x1, y1, x2, y2, x3, y3);
+    cout << A << endl;
     
     float A1 = S(0, 0, x2, y2, x3, y3);
     float A2 = S(x1, y1, 0, 0, x3, y3);
     float A3 = S(x1, y1, x2, y2, 0, 0);
-
     if (A == (A1+A2+A3)){
         cout << "Початок координат належить трикутнику.\n";
     } else  {cout << "Початок координат не належить трикутнику.\n";}

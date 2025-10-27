@@ -16,7 +16,7 @@ int randomNum(int min, int max){
 int findNumber(int bal){
     bal -= 50;
     int n = 0, r = randomNum(1, 100);
-    for(int i=5; i>1; i--){
+    for(int i=4; i>1; i--){
         cout << "Залишилось " << i << " Спроб\nСпробуйте відгадати число" << endl;
         cin >> n;
         cout << endl;
@@ -73,7 +73,7 @@ int gameMachine(int bal){
         res[i] = r;
     }
     cout << "\n" << endl;
-    bool win = (res[0] == res[1] == res[2]);
+    bool win = (res[0] == res[1] && res[0] == res[2]);
     bool miniWin = (res[0] == res[1] || res[0] == res[2] || res[1] == res[2]);
     if(win){
         cout << "Джекпот!!!" << "\n" << endl;
@@ -87,19 +87,74 @@ int gameMachine(int bal){
 
 //третя гра
 int rummy(int bal){
-   
-    return bal;
-}
+    bal -= 50;     
+    const int n = 3;
+    int res[n];
 
-//четверта гра
-int nim(int bal){
-    
-    return bal;
-}
+    cout << "\r";
 
-//п'ята гра
-int bullsAndCows(int bal){
-    
+    for (int i = 0; i < n; i++) {
+        int r, spins = 40;
+
+        for (int s = 0; s < spins; s++) {
+            r = randomNum(1, 9);
+
+            string output;
+            for (int j = 0; j < n; j++) {
+                if (j < i) output += to_string(res[j]);
+                else if (j == i) output += to_string(r);
+                else output += "";
+                if (j < n - 1) output += "";
+            }
+
+            cout << "\r" << string(20,' ') << "\r";
+            cout << left << setw(1) << output << flush;
+            this_thread::sleep_for(chrono::milliseconds(60 + s * 5));
+        }
+        res[i] = r;
+    }
+        if(res[0]==res[1] && res[0]==res[2] || res[0] == (res[1] - 1) && res[1] == (res[2] - 1)){
+            cout << "Вітаємо!!!" << endl;
+        } else {
+            cout << "\nНевдача, спробуйте ще раз!" << endl;
+            cout << "Оберіть дію: \n0: Вийти\n1: Замінити число 1\n2: Замінити число 2\n3: Замінити число 3\n Майте на увазі що заміна коштуватиме ще 50 жетонів" << endl;
+            int choice;
+        cin >> choice;
+
+        if (choice >= 1 && choice <= 3) {
+            bal -= 50;
+            int i = choice - 1;
+            int r, spins = 40;
+
+            for (int s = 0; s < spins; s++) {
+                r = randomNum(1, 9);
+
+                string output;
+                for (int j = 0; j < n; j++) {
+                    if (j == i) output += to_string(r);
+                    else output += to_string(res[j]);
+                    if (j < n - 1) output += "";
+                }
+
+                cout << "\r" << string(20, ' ') << "\r";
+                cout << left << setw(1) << output << flush;
+                this_thread::sleep_for(chrono::milliseconds(60 + s * 5));
+            }
+            res[i] = r;
+
+            cout <<  "\r" << res[0] << res[1] << res[2] << endl;
+
+            if ((res[0] == res[1] && res[0] == res[2]) ||
+                (res[0] == res[1] - 1 && res[1] == res[2] - 1)) {
+                cout << "\nВітаємо!!!" << endl;
+                bal += 200;
+            } else {
+                cout << "\nНевдача, пощастить іншим разом!" << endl;
+            }
+        }
+
+        }
+    cout << "\n" << endl;
     return bal;
 }
 
@@ -107,22 +162,21 @@ int bullsAndCows(int bal){
 void rules(){
     cout << "1: Знайди приховане число\nCпроба: 50 жетонів    Виграш: 100 жетонів    Частковий виграш: 50 жетонів\n\nМашина загадує число від 1 до 100\nВи повинні відгадати його завдяки підказкам за обмежену к-ть спроб\n" << endl;
     cout << "2: Ігровий автомат\nОдин оберт: 50 жетонів    Джекпот: 300 жетонів    Частковий виграш: 100 жетонів\n\nГенеруються три випадкових числа\nЯкщо вони збігаються, то баланс росте\n" << endl;
+    cout << "3: Rummy\nОдна спроба 50 жетонів    Заміна одного числа 50 жетонів    Виграш: 200 жетонів\n\n Генерується тризначне число\nЯкщо цифри числа збігаються, або утворюють послідовність то баланс росте\nУ кожній спробі є можливість замінити 1 цифру на вибір на випадкову" << endl;
 }
 
 //функція для вибору гри
 void choseGame(int bal){
     int g;
     cout << "Ваш баланс: " << bal << "\nОберіть гру в яку хочете зіграти" << endl;
-    cout << "1: Знайди приховане число\n2: Ігровий автомат\n3: Rummy\n4: Нім\n5: Бики і корови\n6: Правила ігор" << endl;
+    cout << "1: Знайди приховане число\n2: Ігровий автомат\n3: Rummy\n4: Правила ігор" << endl;
     cin >> g;
     cout << "\n" << endl;
     switch(g){
         case 1: choseGame(findNumber(bal)); break;
         case 2: choseGame(gameMachine(bal)); break;
         case 3: choseGame(rummy(bal)); break;
-        case 4: choseGame(nim(bal)); break;
-        case 5: choseGame(bullsAndCows(bal)); break;
-        case 6: rules(); choseGame(bal); break;
+        case 4: rules(); choseGame(bal); break;
     }
 }
 int main(){
