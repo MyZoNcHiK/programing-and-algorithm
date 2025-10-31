@@ -21,12 +21,12 @@ int main() {
 
     for (int i = 1; i < 30; i++) {
         if (prices[i] - minPrice > maxProfit) {
-            maxProfit = prices[i] - minPrice;
-            sellDay = i;
+                maxProfit = prices[i] - minPrice;
+                sellDay = i;
         }
         if (prices[i] < minPrice) {
-            minPrice = prices[i];
-            buyDay = i;
+                minPrice = prices[i];
+                buyDay = i;
         }
     }
 
