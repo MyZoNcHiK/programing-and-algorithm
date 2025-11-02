@@ -15,18 +15,18 @@ int main() {
     }
     cout << endl;
 
-    int minPrice = prices[0];
-    int buyDay = 0, sellDay = 0;
-    int maxProfit = 0;
+    int minPrice = prices[0], minIndex =0, buyDay = 0, sellDay = 0, maxProfit = 0;
 
     for (int i = 1; i < 30; i++) {
         if (prices[i] - minPrice > maxProfit) {
-                maxProfit = prices[i] - minPrice;
-                sellDay = i;
+            maxProfit = prices[i] - minPrice;
+            buyDay = minIndex; 
+            sellDay = i;
         }
+
         if (prices[i] < minPrice) {
-                minPrice = prices[i];
-                buyDay = i;
+            minPrice = prices[i];
+            minIndex = i;
         }
     }
 
