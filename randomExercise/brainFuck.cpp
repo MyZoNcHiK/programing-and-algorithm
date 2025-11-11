@@ -6,16 +6,16 @@ using namespace std;
 int head = 0;
 int a[32] = {0};
 
-void baseSyntax(const string& cmd);
+void baseSyntax(string& cmd);
 
-void cycle(const string& cmd, int& i) {
+void cycle(string& cmd, int& i) {
     int start = i;
     string partCmd;
     int depth = 1;
 
     for (int j = i + 1; j < cmd.size(); j++) {
-        if (cmd[j] == '[') depth++;
-        else if (cmd[j] == ']') depth--;
+        if (cmd[j] == '['){depth++;}
+        else if (cmd[j] == ']'){depth--;}
         if (depth == 0) {
             partCmd = cmd.substr(i + 1, j - i - 1); 
             i = j; 
@@ -28,7 +28,7 @@ void cycle(const string& cmd, int& i) {
     }
 }
 
-void baseSyntax(const string& cmd) {
+void baseSyntax(string& cmd) {
     for (int i = 0; i < cmd.size(); i++) {
         switch (cmd[i]) {
             case '+': a[head]++; break;
@@ -37,6 +37,13 @@ void baseSyntax(const string& cmd) {
             case '<': head--; break;
             case '[': cycle(cmd, i); break;
             default: break;
+        }
+        if(head == -1||head==32) {
+            cout << "Помилка: вихід за межі пам'яті" << endl;
+            break;
+        }
+        if(a[head]==-1){
+           a[head] = 255; 
         }
     }
 }
@@ -47,7 +54,7 @@ int main() {
 
     baseSyntax(cmd);
 
-    for (int x : a) cout << x << " ";
+    for (int x : a){cout << x << " ";}
     cout << endl;
     return 0;
 }
