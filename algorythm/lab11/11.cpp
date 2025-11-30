@@ -1,58 +1,102 @@
 #include<iostream>
 #include<cstring>
+#include<cctype>
 using namespace std;
 
 int main(){
     string n;
     cin >> n;
-    cout << endl; 
-    int S = 0,nsize,type;
+    cout << endl;
 
-    for(int i=0; i<n.length(); i++){
+    int S = 0, nsize = 0, type = 0;
+
+    for(int i = 0; i < n.length(); i++){
         if(!isdigit(n[i])){
             cout << "Номер містить недопустимі символи" << endl;
             return 1;
         }
     }
-    if(n.length() == 14){
-    nsize = 14;
-    type = 1;
-    } else if (n.length() == 16){
-    nsize = 16;
-    type = 2;
-    } else if (n.length() == 19){
-    nsize = 19; 
-    type = 3;
-    } else { 
+
+    if(n.length() == 15){
+        nsize = 15;
+        type = 1;
+    } 
+    else if(n.length() == 16){
+        nsize = 16;
+        type = 2;
+    } 
+    else if(n.length() == 20){
+        nsize = 20;
+        type = 3;
+    } 
+    else {
         cout << "Номер містить не відповідну кількість символів" << endl;
+        return 1;
     }
-    int num[nsize];
-    for(int i=0; i<n.length(); i++){
+
+    int num[25];
+
+    for(int i = 0; i < nsize; i++){
         num[i] = n[i] - '0';
     }
-    for(int i=0; i<n.length()-1; i += 2){
-        num[i] *= 2;
-        int l = num[i] % 10;
-        if(num[i] > 9){        
-            num[i] = l+1;
+
+    if(type == 1){//imei
+        for(int i = nsize - 2; i >= 0; i--){
+            int digitValue = num[i];
+
+            if((nsize - 2 - i) % 2 == 0){
+                digitValue *= 2;
+                if(digitValue > 9) digitValue = (digitValue % 10) + 1;
+            }
+
+            S += digitValue;
         }
-    } 
-    for(int i=0; i<n.length(); i++){
-        S += num[i];
-    }
-    cout << endl << S << endl;
-    if(type == 1){
-        if((S*9)%10 == num[nsize-1]){
+
+        int X = (10 - (S % 10)) % 10;
+
+        if(X == num[nsize - 1])
             cout << "Контрольна цифра вірна" << endl;
-        } else {
+        else
             cout << "Контрольна цифра не вірна" << endl;
+    }
+    if(type == 2){//карта
+        S = 0;
+        for(int i = nsize - 1; i >= 0; i--){
+            int digitValue = num[i];
+
+            if((nsize - 1 - i) % 2 == 1){ 
+                digitValue *= 2;
+                if(digitValue > 9) digitValue = (digitValue % 10) + 1;
+            }
+
+            S += digitValue;
         }
-    } else if(type == 2){
-        if(S%10==0){
+
+        if(S % 10 == 0)
             cout << "Контрольна сума вірна" << endl;
-        } else {
+        else
             cout << "Контрольна сума не вірна" << endl;
+    }
+    if(type == 3){//iccid
+        for(int i = nsize - 2; i >= 0; i--){
+            int digitValue = num[i];
+
+            if((nsize - 2 - i) % 2 == 0){
+                digitValue *= 2;
+                if(digitValue > 9) digitValue = (digitValue % 10) + 1;
+            }
+
+            S += digitValue;
         }
-    } 
+
+        int X = (10 - (S % 10)) % 10;
+
+        if(X == num[nsize - 1])
+            cout << "Контрольна цифра ICCID вірна" << endl;
+        else
+            cout << "Контрольна цифра ICCID не вірна" << endl;
+    }
+
     return 0;
 }
+
