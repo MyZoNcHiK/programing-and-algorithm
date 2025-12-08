@@ -41,7 +41,7 @@ int loadCourses(const string& filename, Course*& courses) {
 
     int n;
     fin >> n;
-    fin.ignore(1, '\n'); // просто пропускаємо символ нового рядка
+    fin.ignore(1, '\n');
 
     courses = new Course[n];
     for (int i = 0; i < n; ++i) {
