@@ -59,7 +59,7 @@ int loadCourses(const string& filename, Course*& courses) {
     return n;
 }
 
-Course* findCourseById(const Course* courses, int n, int id) {
+Course* findCourseById(Course* courses, int n, int id) {
     for (int i = 0; i < n; ++i) {
         if (courses[i].courseId == id) return &courses[i];
     }
