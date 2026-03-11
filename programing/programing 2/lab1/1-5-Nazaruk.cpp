@@ -12,10 +12,11 @@ public:
         this->grade = grade;
         this->subject = subject;
     }
+    string _str_(){
+        return name + " " + subject + " " + to_string(grade);
+    }
     void printInfo(){
-        cout << "Ім'я: " << name << endl;
-        cout << "Оцінка: " << grade << endl;
-        cout << "Предмет: " << subject << endl;
+        cout << this->_str_() << endl;
     }
 };
 
