@@ -50,9 +50,8 @@ int main() {
 
     AutoInsurance car1(t, a);
     AutoInsurance car2 = car1;
-    AutoInsurance car3(25); // створюється авто 'економ'
+    AutoInsurance car3 = 25; // створюється авто 'економ'
 
-    cout << "\n--- Результати ---" << endl;
     cout << "Страхування 1: " << car1.calculatePrice() << " грн" << endl;
     cout << "Страхування 2 (копія): " << car2.calculatePrice() << " грн" << endl;
     cout << "Страхування 3 (авто створено з віку): " << car3.calculatePrice() << " грн" << endl;
