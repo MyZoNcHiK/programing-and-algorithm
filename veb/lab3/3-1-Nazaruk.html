@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Форми</title>
+</head>
+<body>
+<form id="form1" action="">
+<fieldset>
+<legend><h3>Реєстрація</h3></legend>
+<p><em>Заповніть наступні поля</em></p>
+<fieldset>
+<legend><b>Обов'язкові поля:</b></legend>
+<table>
+<tr>
+<td>
+<p>Введіть своє ім’я:
+<input type="text" placeholder="Введіть своє ім'я" required></p>
+<p>Введіть своє прізвище:
+<input type="text" placeholder="Введіть своє прізвище" required></p>
+<p>Введіть пароль:
+<input type="password" placeholder="Обов'язкове поле" required></p>
+<p>Виберіть стать:
+<label><input type="radio" name="sex"> чол.</label>
+<label><input type="radio" name="sex"> жін.</label></p>
+</td> 
+<td>
+Виберіть мови програмування, які Ви знаєте:<br />
+<label><input type="checkbox" name="lang" value="pascal"> Pascal</label><br />
+<label><input type="checkbox" name="lang" value="php"> PHP</label><br />
+<label><input type="checkbox" name="lang" value="delphi"> Delphi</label><br />
+<label><input type="checkbox" name="lang" value="js"> JavaScript</label><br />
+<label><input type="checkbox" name="lang" value="basic"> Basic</label>
+</td>
+<td>
+За потреби, можете залишити свій коментар тут: <br />
+<textarea name="comment" cols="35" rows="6" placeholder="Напишіть нам"></textarea>
+</td>
+</tr>
+</table>
+</fieldset>
+<br />
+<fieldset>
+<legend><b>Елементи вибору</b></legend>
+<p>
+Виберіть дату народження:
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+<select>
+<option>Березень</option>
+<option>Квітень</option>
+<option>Травень</option>
+</select>
+<select>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+</select>
+</p>
+<p>
+Виберіть файл:
+<input type="file">
+</p>
+</fieldset>
+<br />
+<fieldset>
+<legend><b>Деякі елементи форми HTML5</b></legend>
+<p>type = "color": <input type="color"></p>
+<p>type = "range": <input type="range"></p>
+<p>type = "date": <input type="date"></p>
+<p>type = "number": <input type="number" min="0" max="100"></p>
+<p>type = "meter": <meter value="70" min="0" max="100"></meter></p>
+</fieldset>
+<br />
+<button form="form1" type="sumbit">Надіслати</button>
+</fieldset>
+</form>
+</body>
+</html>
