@@ -1,0 +1,17 @@
+h2 { 
+color: white; 
+background-color: rgb(130, 121, 255);
+text-align: center;
+padding: 20px;
+}
+h3 { 
+color: white; 
+background-color: rgb(232, 105, 105);
+padding: 20px;
+}
+p {
+    text-indent: 30px;
+}
+body {
+    background-color: rgb(227, 227, 227);
+}
