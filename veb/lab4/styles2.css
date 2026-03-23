@@ -1,0 +1,31 @@
+body{
+    color: white;
+}
+caption{
+    color: black;
+    text-align: end;
+    font-weight: bold;
+}
+#table_caption{
+    background-color: darkblue;
+}
+.num{
+    background-color: lightgray;
+}
+.odd{
+    background-color: blueviolet;
+}
+.even{
+    background-color: crimson;
+}
+table{
+    border-spacing: 0px;
+}
+td{
+    text-align: center;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    border-top: 0px;
+    border-left: 0px;
+}
