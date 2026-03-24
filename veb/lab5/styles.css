@@ -2,6 +2,7 @@ body{
     background-color: rgb(253, 235, 190);
 }
 h1{
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(90, 64, 238);
     text-shadow: 0px 2px 0 rgb(82, 100, 106);
 }
@@ -14,6 +15,7 @@ span.pre{
     margin-left: 30px;
 }
 .white{
+    font-family:'Courier New', Courier, monospace;
     padding: 10px;
     background-color: white;
     border: 1px solid lightgray;
@@ -21,4 +23,7 @@ span.pre{
 span.blue_text{
     color: blue;
     font-style: italic;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
 }
