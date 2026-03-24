@@ -6,7 +6,7 @@ caption{
     text-align: end;
     font-weight: bold;
 }
-#table_caption{
+.table_caption_row{
     background-color: darkblue;
 }
 .num{
