@@ -1,0 +1,34 @@
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.num{
+    background-color: lightgray;
+}
+table{
+    border-spacing: 0px;
+}
+caption{
+    color: rgb(0, 0, 0);
+    text-align: end;
+    font-weight: bold;
+}
+tr:nth-child(odd){
+    background-color: crimson;
+}
+tr:nth-child(even){
+    background-color: blueviolet;
+}
+tr:first-child{
+    background-color: darkblue;
+    font-weight: bold; 
+}
+td{
+    text-align: center;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: dashed;
+    border-top: 0px;
+    border-left: 0px;
+}
