@@ -1,0 +1,73 @@
+body{
+    margin: 0 0;
+    color: black;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 244, 218));
+    font-family: 'Times New Roman', Times, serifS;
+}
+section{
+    margin: 0 auto;
+    min-width: 350px;
+    max-width: 850px;
+}
+section p::first-letter{
+    color: red;
+    font-size: 32px;
+}
+section time{font-style: oblique;}
+header{
+    margin: 0 0;
+    background-color: lightblue;
+}
+header h1{
+    text-align: center;
+    background-color: rgb(234, 176, 100);
+    color: rgb(90, 62, 6);
+    padding: 15px;
+    margin: 0 auto;
+    
+}
+header nav{
+    padding: 10px;
+    text-align: end;
+    margin: 0 auto;
+    width: 95%;
+}
+footer{
+    background-color: rgb(234, 176, 100);
+    color: rgb(90, 62, 6);
+    padding: 5px;
+    margin: 0 0;
+} 
+footer a{
+    text-decoration: none;
+    color: rgb(90, 62, 6);
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+}
+ul li::before {
+    content: "";
+    width: 23px;
+    height: 25px;
+    position: absolute;
+    left: 0px;
+    bottom: 8px;
+    background-image: url("grass.png");
+    background-size: contain;
+}
+h3{font-weight: normal;}
+img {
+    width: 100%;
+    height: auto;
+}
+figcaption{
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
