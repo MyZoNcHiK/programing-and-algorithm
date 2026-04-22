@@ -1,25 +1,19 @@
-#include"Teacher.h"
+#include "Teacher.h"
 
-Teacher::Teacher(
-    string sn, 
-    string cath, 
-    int exp) : 
-     surname_name(sn),
-     cathedra(cath), 
-     exp(exp), 
-    {}
-string Teacher::get_surname_name() const{
-    return surname_name;
+Teacher::Teacher(string sr, string nm, string cath, int exp) : surname(sr), name(nm), cathedra(cath), exp(exp) {}
+
+string Teacher::get_surname() const {
+    return surname;
 }
-string Teacher::get_cathedra() const{
+
+string Teacher::get_name() const {
+    return name;
+}
+
+string Teacher::get_cathedra() const {
     return cathedra;
 }
-string Teacher::get_discipline() const{
-    return discipline;
-}
-string Teacher::get_control_format() const{
-    return control_format;
-}
-int Teacher::get_exp() const{
+
+int Teacher::get_exp() const {
     return exp;
 }
