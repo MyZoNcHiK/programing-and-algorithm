@@ -9,7 +9,7 @@ class Course {
 private:
     string discipline, control_format;
     int hours, students, new_students;
-    Teacher teacher;
+    Teacher* teacher;
 
 public:
     Course(Teacher t, string disc, int h, int s, string ctrl, int new_s);

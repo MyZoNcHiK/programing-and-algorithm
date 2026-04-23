@@ -11,7 +11,7 @@ Teacher Course::get_teacher() const {
 }
 
 void Course::set_teacher(Teacher nt) {
-    teacher = nt;
+    teacher = &nt;
 }
 
 string Course::get_discipline() const {
