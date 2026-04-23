@@ -8,7 +8,6 @@ body{
     gap: 180px;
     justify-content: center;
     align-items: center;
-    animation: load linear 4s infinite;
 }
 .loader {
   width: 40px;
