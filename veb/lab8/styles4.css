@@ -24,6 +24,9 @@ body {
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+.burger:hover span{
+    animation: color 9s linear infinite;
+}
 .burger:hover span:nth-child(1) {
     transform: translateY(11px) rotate(45deg);
 }
@@ -32,4 +35,15 @@ body {
 }
 .burger:hover span:nth-child(3) {
     transform: translateY(-11px) rotate(-45deg);
+}
+@keyframes color{
+    0%{background:white;}
+    13%{background: red;}
+    25%{background-color:orange;}
+    38%{background-color: yellow;}
+    50%{background-color:green;}
+    63%{background-color:blue;}
+    75%{background-color: darkviolet;}
+    88%{background-color:magenta;}
+    100%{background-color:white;}
 }
