@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #0c2a2c;
+    color: white;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: linear-gradient(45deg, #1aa3a3, #00ffaa);
+    border-radius: 4px;
+}
+
+.hero {
+    background: #0f3d3f;
+    color: white;
+    padding: 50px;
+
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 400px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+}
+
+.hero-text h2 {
+    margin-bottom: 10px;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+.features {
+    max-width: 1100px;
+    margin: 40px auto;
+
+    display: flex;
+    gap: 30px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+}
+
+.works {
+    max-width: 1100px;
+    margin: 40px auto;
+
+    display: flex;
+    gap: 30px;
+}
+
+.work {
+    flex: 1;
+    text-align: center;
+}
+
+.work img {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+.footer {
+    background: #0c2a2c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
