@@ -1,8 +1,8 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    text-align: start;
 }
 
 header {
@@ -43,7 +43,7 @@ header {
     border-radius: 4px;
 }
 
-.hero {
+.hello {
     background: #0f3d3f;
     color: white;
     padding: 50px;
@@ -54,19 +54,19 @@ header {
     align-items: center;
 }
 
-.hero-text {
+.hello-text {
     max-width: 400px;
 }
 
-.hero-text h1 {
+.hello-text h1 {
     font-size: 36px;
 }
 
-.hero-text h2 {
+.hello-text h2 {
     margin-bottom: 10px;
 }
 
-.hero-image img {
+.hello-image img {
     max-width: 100%;
 }
 
