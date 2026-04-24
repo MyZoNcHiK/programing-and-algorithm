@@ -4,7 +4,7 @@ body{
     background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 244, 218));
     font-family: 'Times New Roman', Times, serifS;
 }
-section{
+main{
     margin: 0 auto;
     min-width: 350px;
     max-width: 850px;
