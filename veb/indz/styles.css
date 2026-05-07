@@ -1,37 +1,91 @@
-* {
+*{
     margin: 0;
     box-sizing: border-box;
+    position: absolute;
+
 }
-body {
-    width: 100vw;
-    height: 100vh;
+html, body{
+    position: static;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-.ground {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 25%;
-  background: linear-gradient(#0a3d0a, #0f6015);
+.celestial{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    animation:move 6s linear infinite,
+              phase 12s linear infinite;
 }
-.celestial {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  border-radius: 100%;
-  animation:move 6s linear infinite,
-            phase 12s linear infinite;
+.sky{
+    width:100%;
+    height:75%;
+}
+.sky-day{ 
+    background:linear-gradient(80deg,#a6dbff 0%,#78b2ea 55%,#4b86c5 100%);
+    animation:dayFade 12s linear infinite;
+}
+.sky-night{
+    background:linear-gradient(280deg,#3a4680 0%,#1b2550 55%,#050814 100%);
+    animation:nightFade 12s linear infinite;
+}
+.ground{
+    left: 0;
+    right: 0;
+    bottom:0;
+    height:25%;
+}
+.ground-day{
+    background:linear-gradient(0deg,#2e7d32 0%,#5ec16f 55%,#8ee39a 100%);
+    animation:dayFade 12s linear infinite;
+}
+.ground-night{
+    background:linear-gradient(0deg,#0b1f14 0%,#173828 55%,#245c3e 100%);
+    animation:nightFade 12s linear infinite;
+}
+.leo{
+    inset: 0;
+    transform-origin: left bottom;
+    transform: rotate(-10deg);
+    animation:starsFade 12s linear infinite;
+}
+.leo span{
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+}
+.leo span:nth-child(1){top:35%;left:7%;}
+.leo span:nth-child(2){top:23%;left:13%;}
+.leo span:nth-child(3){top:33%;left:15%;}
+.leo span:nth-child(4){top:19%;left:23%;width:4px;height:4px;box-shadow:0 0 7px white;}
+.leo span:nth-child(5){top:26%;left:26%;}
+.leo span:nth-child(6){top:31%;left:27%;width:4px;height:4px;box-shadow:0 0 6px white;}
+.leo span:nth-child(7){top:15%;left:24%;}
+.leo span:nth-child(8){top:12%;left:26%;}
+.leo span:nth-child(9){top:14%;left:28%;}
+@keyframes starsFade{
+    0%  {opacity:0;}
+    20% {opacity:0;}
+    40% {opacity:0;}
+    50% {opacity:1;}
+    60% {opacity:1;}
+    70% {opacity:1;}
+    80% {opacity:1;}
+    90% {opacity:1;}
+    100%{opacity:0;}
 }
 @keyframes move {
-    0%   {top: 60%; left: -5%;}
-    10%   {top: 48%;}
-    20%   {top: 38%;}
-    30%   {top: 30%;}
-    40%   {top: 24%;}
-    50%   {top: 20%;}
-    60%   {top: 24%;}
-    70%   {top: 30%;}
-    80%   {top: 38%;}
-    90%   {top: 48%;}
+    0%  {top: 60%; left: -5%;}
+    10% {top: 48%;}
+    20% {top: 38%;}
+    30% {top: 30%;}
+    40% {top: 24%;}
+    50% {top: 22%;}
+    60% {top: 24%;}
+    70% {top: 30%;}
+    80% {top: 38%;}
+    90% {top: 48%;}
     100%{top: 60%; left: 105%;}
 }
 @keyframes phase {
@@ -52,40 +106,25 @@ body {
     }
     100% {filter: brightness(0.6); box-shadow: none; transform: scale(0.7);}
 }
-.sky{
-  position:absolute;
-  width:100%;
-  height:75%;
-}
-.sky-day, .sky-night{
-  position:absolute;
-  inset:0;
-}
-.sky-day{
-  background:linear-gradient(100deg,#b3e5ff 0%,#6fa3d8 100%);
-  animation:dayFade 12s linear infinite;
-}
-.sky-night{
-  background:linear-gradient(320deg,#1f2b4f 0%,#050814 100%);
-  animation:nightFade 12s linear infinite;
-}
 @keyframes dayFade{
   0%{opacity:1;}
-  40%{opacity:1;}
-  50%{opacity:0;}
-  60%{opacity:0;}
+  20%{opacity:1;}
+  40%{opacity:0.8;}
+  50%{opacity:0.4s;}
+  60%{opacity:0.3;}
   70%{opacity:0;}
   80%{opacity:0;}
-  90%{opacity:0;}
-  100%{opacity:1;}
+  90%{opacity:0.3;}
+  100%{opacity:0.9;}
 }
 @keyframes nightFade{
-  0%{opacity:0;}
-  40%{opacity:0;}
-  50%{opacity:1;}
-  60%{opacity:1;}
+  0%{opacity:0,1;}
+  20%{opacity: 0;}
+  40%{opacity:0.2;}
+  50%{opacity:0.7;}
+  60%{opacity:0.9;}
   70%{opacity:1;}
-  80%{opacity:1;}
-  90%{opacity:1;}
-  100%{opacity:0;}
+  80%{opacity:0.9;}
+  90%{opacity:0.9}
+  100%{opacity:0.3s;}
 }
