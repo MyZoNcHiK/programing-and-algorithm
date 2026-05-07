@@ -1,3 +1,130 @@
-p {
-    
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
+body {
+    width: 100vw;
+    height: 100vh;
+}
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(#0a3d0a, #0f6015);
+}
+.celestial {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  animation:move 6s linear infinite,
+            phase 12s linear infinite;
+}
+@keyframes move {
+    0%   {top: 60%; left: -5%;}
+    10%   {top: 48%;}
+    20%   {top: 38%;}
+    30%   {top: 30%;}
+    40%   {top: 24%;}
+    50%   {top: 20%;}
+    60%   {top: 24%;}
+    70%   {top: 30%;}
+    80%   {top: 38%;}
+    90%   {top: 48%;}
+    100%{top: 60%; left: 105%;}
+}
+@keyframes phase {
+    0%, 45% {
+        background: radial-gradient(circle at 30% 30%, #fff7b0, #ffb700);
+        box-shadow: 0 0 50px rgba(255,200,0,0.9);
+        filter: brightness(1);
+        transform: scale(1.1);
+    }
+    35%{filter: brightness(1.3);}
+    45% {filter: brightness(1.1);}
+    50% {box-shadow: none; transform: scale(0.7);}
+    55%, 95% { 
+    background: radial-gradient(circle at 30% 30%, #f0f4ff, #9aa7c7); 
+    box-shadow: 0 0 40px rgba(180,200,255,0.7);
+    filter: brightness(0.9);
+    transform: scale(1);
+    }
+    100% {filter: brightness(0.6); box-shadow: none; transform: scale(0.7);}
+}
+
+.sky{
+  position:absolute;
+  width:100%;
+  height:75%;
+}
+.sky-day, .sky-night{
+  position:absolute;
+  inset:0;
+}
+.sky-day{
+  background:linear-gradient(100deg,#b3e5ff 0%,#6fa3d8 100%);
+  animation:dayFade 12s linear infinite;
+}
+.sky-night{
+  background:linear-gradient(320deg,#1f2b4f 0%,#050814 100%);
+  animation:nightFade 12s linear infinite;
+}
+@keyframes dayFade{
+  0%{opacity:1;}
+  40%{opacity:1;}
+  50%{opacity:0;}
+  60%{opacity:0;}
+  70%{opacity:0;}
+  80%{opacity:0;}
+  90%{opacity:0;}
+  100%{opacity:1;}
+}
+
+@keyframes nightFade{
+  0%{opacity:0;}
+  40%{opacity:0;}
+  50%{opacity:1;}
+  60%{opacity:1;}
+  70%{opacity:1;}
+  80%{opacity:1;}
+  90%{opacity:1;}
+  100%{opacity:0;}
+}
+/* .sky {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    animation: skyCycle 12s ease-in-out infinite;
+}
+@keyframes skyCycle{
+0% {background:linear-gradient(50deg,#f9ddb0 0%,#6fa3d8 100%);}
+10%{background:linear-gradient(70deg,#cbe9ff 0%,#7fb5e8 100%);}
+20%{background:linear-gradient(90deg,#b3e5ff 0%,#87cefa 100%);}
+30%{background:linear-gradient(110deg,#9fdaf3 0%,#6fb1e7 100%);}
+40%{background:linear-gradient(130deg,#8cccf0 0%,#5f91ca 100%);}
+50%{background:linear-gradient(150deg,#6faedb 0%,#3f5f8f 100%);}
+60%{background:linear-gradient(200deg,#3b4f7a 0%,#1e2a4f 100%);}
+70%{background:linear-gradient(240deg,#2b3f66 0%,#141c38 100%);}
+80%{background:linear-gradient(270deg,#1f2b4f 0%,#0b132b 100%);}
+90%{background:linear-gradient(300deg,#162046 0%,#070d1f 100%);}
+100%{background:linear-gradient(320deg,#101833 0%,#050814 100%);}
+} */
+
+/*
+.stars span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  animation: starsAppear 40s ease-in-out infinite;
+}
+
+.stars span:nth-child(1) { top: 10%; left: 20%; }
+.stars span:nth-child(2) { top: 25%; left: 35%; }
+.stars span:nth-child(3) { top: 15%; left: 55%; }
+.stars span:nth-child(4) { top: 30%; left: 70%; }
+.stars span:nth-child(5) { top: 8%;  left: 80%; }
+.stars span:nth-child(6) { top: 22%; left: 90%;
+
