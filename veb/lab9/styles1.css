@@ -2,30 +2,45 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    text-align: start;
+    font-size: 18px;
+    box-sizing: border-box;
 }
-
-header {
+.flex-conteiner{
+    display: flex;
+}
+header, footer {
     background: #0155ae;
     color: white;
 }
-.header-inner {
+.header-inner, .footer-inear{
     max-width: 1100px;
     margin: auto;
-    padding: 20px;
-    display: flex;
+    height: 90px;
     justify-content: space-between;
     align-items: center;
+}
+.header-inner {
     font-size: 16px;
 }
 .logo {
+    position: relative;
+    height: 100%;
+    align-items: center;
     font-size: 40px;
     font-weight: bold;
-    font-family: "Carter One";
+    font-family: "Carter One", sans-serif;
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 22px;
+  background: radial-gradient( ellipse at center top,rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.2) 40%, transparent 70%);
 }
 .menu {
     list-style: none;
-    display: flex;
     gap: 20px;
     font-size: 1em;
 }
@@ -39,54 +54,56 @@ header {
     font-family: "Mozilla Text";
 }
 .menu a:hover {
-    background: linear-gradient(45deg, #1a8ea3, #00d5ff);
+    background: linear-gradient(45deg, #1159b0, #009dff);
     border-radius: 4px;
 }
 .hello {
+    position: relative;
     background: #187afa;
     color: white;
-    padding: 50px;
-
-    display: flex;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.hello::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: radial-gradient( ellipse at center top,rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 40%, transparent 75%);
+}
+.hello-conteiner{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
     gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.hello-text {
-    max-width: 400px;
+.hello-text, .hello-image img{
+    max-width: 100%;
+    flex: 1;
+    
 }
 .hello-text h1 {
+    font-family: "Stack Sans Headline";
     font-size: 36px;
 }
 .hello-text h2 {
     margin-bottom: 10px;
 }
-.hello-image img {
-    max-width: 100%;
-}
-.features {
+.plans, .works {
     max-width: 1100px;
     margin: 40px auto;
-
-    display: flex;
     gap: 30px;
 }
-.feature {
-    flex: 1;
-    text-align: center;
-}
-.plans {
-    max-width: 1100px;
-    margin: 40px auto;
-    display: flex;
-    gap: 30px;
-}
-.plan {
-    flex: 1;
-    text-align: center;
+.plan, .work {
+    flex-direction: column;
+    text-align: left;
 }
 .plan-title {
-    display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
@@ -98,42 +115,79 @@ header {
 .plan-title h2 {
     margin: 0;
     font-size: 1.5em; 
-    display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     height: 3.5em;
 }
-.works {
-    max-width: 1100px;
-    margin: 40px auto;
-    display: flex;
-    gap: 30px;
+.plan {
+    flex-direction: column;
+    text-align: left;
 }
-.work {
-    flex: 1;
-    text-align: center;
+.read-more {
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 3px;
+    align-self: flex-start;
+    background-color: white;
+    cursor: pointer;
 }
 .work img{
     width: 100%;
     height: 40%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     margin-bottom: 10px;
-    object-fit: cover;
+    object-fit: contain;
+}
+hr{
+    border: none;
+    height: 2px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(90deg,transparent,black, transparent);
+}
+.tweet-inner {
+    align-items: center;
+    gap: 15px;
+    font-size: 0.85em;
+    color: rgb(69, 69, 69);
+    max-width: 1100px;
+    margin: 15px auto;
+    justify-content: center;
+}
+.tweet img {
+    flex: 1;
+    width: 10px;
+    object-fit: contain;
+}
+.tweet p{
+    flex: 20;
+}
+.tweet a {
+    color: black;
+    text-decoration: none;
+}
+.tweet span {
+    color: black;
+}
+.tweet-btn {
+    flex: 4;
+    height: 50px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    font-size: 0.85em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.tweet-btn:hover {
+    background: linear-gradient(45deg, #eeeeee, #dddddd);
 }
 .footer {
-    background: #0155ae;
-    color: white;
     text-align: center;
     padding: 15px;
     margin-top: 40px;
 }
 .footer-inear {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 8pxs;
     font-size: 0.8em;
 }

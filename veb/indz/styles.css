@@ -2,7 +2,6 @@
     margin: 0;
     box-sizing: border-box;
     position: absolute;
-
 }
 html, body{
     position: static;
