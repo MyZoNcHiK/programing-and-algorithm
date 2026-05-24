@@ -1,0 +1,52 @@
+* {
+    font-family: "Open sans";
+    margin: 0;
+    padding: 0;
+}
+.flex {
+    display: flex;
+}
+body {
+    background-color: #2d323b;
+    margin: 0 0;
+    font-size: 13px;
+}
+header {
+    width: 100wh;
+    height: 60px;
+    background-color: #171d25;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+}
+header nav {
+    margin: 8px 8px 0 8px;
+    font-size: 1.4em;
+}
+header nav:first-child{
+    justify-content: space-between;
+    font-size: 1em;
+}
+header nav:last-child{
+    font-weight: 650;
+}
+nav ul {
+  gap: 1em;
+  list-style: none;
+}
+ul a {
+    height: 1em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:  #dcdedf;
+}
+svg{
+    color:  #dcdedf;
+    width: 1em;
+    height: auto;
+    margin:  0 5px 0 5px;
+    background: transparent;
+    border: none;
+}
+
