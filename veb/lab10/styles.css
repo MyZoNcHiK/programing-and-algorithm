@@ -7,46 +7,231 @@
     display: flex;
 }
 body {
+    overflow: hidden;
     background-color: #2d323b;
     margin: 0 0;
     font-size: 13px;
 }
 header {
-    width: 100wh;
-    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+
     background-color: #171d25;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 1.5em;
+    padding-bottom: 0.9em;
 }
-header nav {
-    margin: 8px 8px 0 8px;
-    font-size: 1.4em;
+header nav:nth-child(1){
+    width: 500px;
+    justify-content: space-between;
+    margin: 7px 5px auto auto;
+    font-size: 1.1em;
 }
-header nav:first-child{
+header nav:nth-child(2){
     justify-content: space-between;
     font-size: 1em;
+    margin: -1.4em 0 0 10px;
 }
-header nav:last-child{
+header nav:nth-child(3){
+    font-size: 1.4em;
     font-weight: 650;
+    margin: 0 0 0 10px;
+    align-items: center;
+    color: #dcdedf;
+}
+header nav:nth-child(3) span{
+    color: #1999ff;
+    border-bottom: 5px solid #1999ff;
+    border-radius: 2px;
+    padding-top: 5px;
 }
 nav ul {
-  gap: 1em;
-  list-style: none;
+    gap: 1em;
+    list-style: none;
+    padding-left: 0;
 }
 ul a {
     height: 1em;
     display: flex;
     align-items: center;
     text-decoration: none;
-    color:  #dcdedf;
+    color:  #8b929a;
+}
+header nav:nth-child(3) a{
+    color: #dcdedf;
+}
+header nav:nth-child(3) a:hover{
+    color: #ffffff;
+}
+ul a:hover{
+    color: #dcdedf;
 }
 svg{
-    color:  #dcdedf;
-    width: 1em;
-    height: auto;
-    margin:  0 5px 0 5px;
-    background: transparent;
+    display: block;
+    width: 20px;
+    height: 20x;
+    margin:  0 7px 0 3px;
     border: none;
 }
-
+#down-arrow{
+    display: inline-block;
+}
+nav button{
+    display: inline-flex;
+    color: #8b929a;
+    background: transparent;
+    border: none;
+    height: auto;
+    padding: 0 6px;
+}
+nav button:hover{
+    color: #dcdedf;
+    background-color: #8b929a;
+}
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    background: transparent;
+    border: none;
+    padding: 0 6px 12px 6px;
+    color: #8b929a;
+    margin: 0 0 0 0;
+}
+.arrows:hover{
+    background: transparent;
+}
+.arrows:hover {
+    background: transparent;
+    color: #dcdedf;
+}
+.sidebar {
+    width: 350px;
+    height: calc(100vh - 90px);
+    z-index: 1000;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    overflow-y: auto;
+    background-color: #24282f;
+}
+#profile-but{
+    background-color: #272d37;
+    color: #8b929a;
+    padding: 0 5px;
+    border-radius: 2px;
+}
+#profile-but span{
+    color: #1999ff;
+}
+#horn,
+#notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 32px;
+    background-color: #272d37;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+#horn{
+    background-color: #1999ff;
+}
+#notification:hover {
+    background-color: #8b929a;
+}
+#horn:hover{
+    background-color: #289eff;
+}
+#horn svg,
+#notification svg {
+    pointer-events: none;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+.colections {
+    display: flex;
+    align-items: center;
+    background-color: #171d25;
+    height: 50px;
+    padding: 0 8px;
+    gap: 8px;
+}
+.colections button:first-child {
+    flex: 1;
+    height: 40px;
+    background-color: #2a3038;
+    border: none;
+    color: #8b929a;
+    text-align: left;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+.colections button:first-child:hover {
+    background-color: #353b45;
+    color: #dcdedf;
+}
+.colections button:last-child {
+    color:#8b929a;
+    width: 40px;
+    height: 40px;
+    background-color: #2a3038;
+    border: none;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    align-items:center;
+    gap: 6px;
+    padding: 6px;
+}
+.colections button:last-child:hover {
+    background-color: #25272d;
+    color: #dcdedf;
+}
+.colections button:last-child span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 1px;
+}
+.main {
+    margin-top: 90px;
+    background-color: #2d333c;
+    margin-left: 350px;
+    height: 100vh;
+    overflow-y: auto;
+    flex: 1;
+}
+.game-list{
+    padding: 0;
+}
+.game-list li{
+    color: #92979d;
+    list-style: none;
+    padding-left: 25px;
+}
+.game-list li:hover{
+    color:#dcdcdc;
+    background-color: #323a4b;
+}
+.game-list .category{
+    padding-left: 5px;
+    font-size: 1.15em;
+    color: #b4cbe1;
+    list-style:inside;
+    background: linear-gradient(90deg,rgba(41, 47, 59, 1) 0%, rgba(36, 40, 47, 1) 100%);
+}
+.game-list .category:hover{
+    color: #dcdcdc;
+    background-color: #323a4b;
+}

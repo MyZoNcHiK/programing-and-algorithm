@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
     <title>Steam library</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="flex">
+        <nav class="flex">
+            <button id="horn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" viewBox="0 0 18 18">
+                    <path d="M12.5 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .7c-2 .9-4.3 1.4-6.7 1.6v6.2c.4 0 .7 0 1 .05 2 .2 3.9.7 5.7 1.5zm-7.6 7.8V4.9c-.7 0-1.3 0-1.9.05A2 2 0 0 0 0 7v2c0 1.1.9 2 2 2h.5c.5 0 1 0 1.4.05m1.3 1.1c.4 0 .8.05 1.2.1l.25 1.6a1 1 0 0 1-1 1.2h-.5a1 1 0 0 1-.9-.6l-1.3-2.4c.6 0 1.1 0 1.6.05"/>
+                    <path d="M16.8 6 L18.8 7.2 V8.8 L16.8 10 Z"/>
+                </svg>
+            </button>
+            <button id="notification">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#8b929a" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                </svg>
+            </button>   
+            <button id="profile-but"><span>MyZoNcHiK 
+                <svg id="down-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1999ff" stroke-width="2" stroke-linecap="round">
+                    <line x1="4" y1="6" x2="8" y2="10" />
+                    <line x1="12" y1="6" x2="8" y2="10" />
+                </svg></span>
+            0,00$</button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 26">
+                    <rect x="1" y="6" width="22" height="14" fill="none" stroke="currentColor" stroke-width="3"/>
+                    <line x1="7" y1="24" x2="19" y2="24" stroke="currentColor" stroke-width="8"/>
+                </svg>
+            </button>
+            <button>    
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="20" y1="12" x2="4" y2="12"></line>
+                </svg>
+            </button>
+            <button>    
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                    <rect x="0.5" y="1" width="15" height="14" fill="none" stroke="currentColor" stroke-width="1"/>
+                    <line x1="1" y1="2" x2="15" y2="2" stroke="currentColor" stroke-width="2.5"/>
+                </svg>
+            </button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="20" y1="4" x2="4" y2="20"></line>
+                    <line x1="4" y1="4" x2="20" y2="20"></line>
+                </svg>
+            </button>
+        </nav>
         <nav class="flex">
             <ul class="flex">
                 <li><a href="#">
@@ -23,30 +68,71 @@
                 <li><a href="#">Ігри</a></li>
                 <li><a href="#">Довідка</a></li>
             </ul>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="20" y1="4" x2="4" y2="20"></line>
-                <line x1="4" y1="4" x2="20" y2="20"></line>
-            </svg>
         </nav>
         <nav class="flex">
-            <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12H19M12 5l7 7-7 7" />
-            </svg>
+            <button class="arrows">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button class="arrows">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12H19M12 5l7 7-7 7" />
+                </svg>
+            </button>
             <ul class="flex">
                 <li><a href="#">КРАМНИЦЯ</a></li>
-                <li><a href="#">БІБЛІОТЕКА</a></li>
+                <li><a href="#"><span>БІБЛІОТЕКА</span></a></li>
                 <li><a href="#">СПІЛЬНОТА</a></li>
                 <li><a href="#">MYZONCHIK</a></li>
             </ul>
         </nav>    
     </header>
-
+    <aside class="sidebar">
+        <div class="colections">
+            <button>Домівка</button>
+            <button><span></span><span></span><span></span><span></span></button>
+        </div>
+        <ul class="game-list">
+            <li class="category">ВИБРАНЕ</li>
+            <li>Blasphemous</li>
+            <li>CARRION</li>
+            <li>Celeste</li>
+            <li>Dead Cells</li>
+            <li>Deep Rock Galactic</li>
+            <li>Hotline Miami</li>
+            <li>Terraria</li>
+            <li>The Binding of Isaac: Rebirth</li>
+            <li class="category">БЕЗ КАТЕГОРІЇ</li>
+            <li>Bloody Hell</li>
+            <li>Bloons TD</li>
+            <li>Brawlhalla</li>
+            <li>Clone Drone in the Danger Zone</li>
+            <li>DOOM</li>
+            <li>Don't Starve Together</li>
+            <li>Infinitode</li>
+            <li>Left 4 Dead 2</li>
+            <li>Limbo</li>
+            <li>Little Nightmares I</li>
+            <li>Little Nightmares II</li>
+            <li>Maneater</li>
+            <li>Mindustry</li>
+            <li>Muck</li>
+            <li>Peak</li>
+            <li>Portal 2</li>
+            <li>Rayman Legends</li>
+            <li>Rayman Origins</li>
+            <li>Risk of Rain 2</li>
+            <li>Slay the Spire</li>
+            <li>Slime Rancher</li>
+            <li>The Witcher: Розширене видання</li>
+            <li>Warframe</li>
+        </ul>
+        </aside>
+    <main class="main">gesgsregsegeges</main>
     <footer>
 
     </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
