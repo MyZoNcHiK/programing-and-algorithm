@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Steam library</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="flex">
@@ -25,30 +26,30 @@
                     <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                 </svg>
             </button>   
-            <button id="profile-but"><span>MyZoNcHiK 
+            <button id="profile-but"><img id="profile-icon" src="https://i.pinimg.com/736x/bc/45/17/bc45171df08df85ae2cc958126c3c49b.jpg" alt="profile icon"><span>MyZoNcHiK 
                 <svg id="down-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1999ff" stroke-width="2" stroke-linecap="round">
                     <line x1="4" y1="6" x2="8" y2="10" />
                     <line x1="12" y1="6" x2="8" y2="10" />
                 </svg></span>
-            0,00$</button>
-            <button>
+            0,00₴</button>
+            <button id="big-picture">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 26">
                     <rect x="1" y="6" width="22" height="14" fill="none" stroke="currentColor" stroke-width="3"/>
                     <line x1="7" y1="24" x2="19" y2="24" stroke="currentColor" stroke-width="8"/>
                 </svg>
             </button>
-            <button>    
+            <button id="minimaze">    
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="20" y1="12" x2="4" y2="12"></line>
                 </svg>
             </button>
-            <button>    
+            <button id="maximaze">    
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
                     <rect x="0.5" y="1" width="15" height="14" fill="none" stroke="currentColor" stroke-width="1"/>
                     <line x1="1" y1="2" x2="15" y2="2" stroke="currentColor" stroke-width="2.5"/>
                 </svg>
             </button>
-            <button>
+            <button id="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="20" y1="4" x2="4" y2="20"></line>
                     <line x1="4" y1="4" x2="20" y2="20"></line>
@@ -88,48 +89,258 @@
             </ul>
         </nav>    
     </header>
-    <aside class="sidebar">
-        <div class="colections">
+    <div class="colections">
             <button>Домівка</button>
             <button><span></span><span></span><span></span><span></span></button>
         </div>
+    <aside class="sidebar">
         <ul class="game-list">
             <li class="category">ВИБРАНЕ</li>
-            <li>Blasphemous</li>
-            <li>CARRION</li>
-            <li>Celeste</li>
-            <li>Dead Cells</li>
-            <li>Deep Rock Galactic</li>
-            <li>Hotline Miami</li>
-            <li>Terraria</li>
-            <li>The Binding of Isaac: Rebirth</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/7f53f8c6c730af6aeb52e66eb74d8507/32/256x256.png" alt="Blasphemous icon">Blasphemous</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/0d5501edb21a59a43435efa67f200828.png" alt="CARRION icon">CARRION</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/48a8673636910f5201befc81aee3fbb3/32/256x256.png" alt="Celeste icon">Celeste</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/5ca3e9b122f61f8f06494c97b1afccf3/32/256x256.png" alr="Dead Cells icon">Dead Cells</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/c4e7bc3145caf05a5689ed8d5cf1eb36.png" alt="Deep Rock Galactic icon">Deep Rock Galactic</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/f8da71e562ff44a2bc7edf3578c593da/32/256x256.png" alt="Hotline Miami icon">Hotline Miami</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/f410c50342ffdcfe68cc45b1c41a3d9a.png" alt="Terraria icon">Terraria</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/7cecf722c8d4a33fe1be826c0c897889/32/256x256.png" alt="The Binding of Isaac: Rebirth icon">The Binding of Isaac: Rebirth</li>
             <li class="category">БЕЗ КАТЕГОРІЇ</li>
-            <li>Bloody Hell</li>
-            <li>Bloons TD</li>
-            <li>Brawlhalla</li>
-            <li>Clone Drone in the Danger Zone</li>
-            <li>DOOM</li>
-            <li>Don't Starve Together</li>
-            <li>Infinitode</li>
-            <li>Left 4 Dead 2</li>
-            <li>Limbo</li>
-            <li>Little Nightmares I</li>
-            <li>Little Nightmares II</li>
-            <li>Maneater</li>
-            <li>Mindustry</li>
-            <li>Muck</li>
-            <li>Peak</li>
-            <li>Portal 2</li>
-            <li>Rayman Legends</li>
-            <li>Rayman Origins</li>
-            <li>Risk of Rain 2</li>
-            <li>Slay the Spire</li>
-            <li>Slime Rancher</li>
-            <li>The Witcher: Розширене видання</li>
-            <li>Warframe</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/0bf1ace74c80d5a941676918831d37e9.png" alt="Bloody Hell icon">Bloody Hell</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/19e321d9f307ccfc1c37106191cbbc74/32/256x256.png" alt="Bloons TD 6 icon">Bloons TD</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/e71fceaf910b1065b49f118cbde48313.png" alt="Brawlhalla icon">Brawlhalla</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/cd2afeae77cf0710c16983b9eab53641/32/256x256.png" alt="Clone Drone in the Danger Zone icon">Clone Drone in the Danger Zone</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/c73dfe6c630edb4c1692db67c510f65c/32/256x256.png" alt="DOOM icon">DOOM</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/e06286a2d9b9682a5cf3eb4d49943036/32/256x256.png" alt="Don't Starve Together icon">Don't Starve Together</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/63ce12dcf1ede17589befd56bb5281a5.png" alt="Infinitode icon">Infinitode</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/4388a23da67b154b780b78dd7ea4636e.png" alt="Left 4 Dead 2 icon">Left 4 Dead 2</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/96779302c4239dbd3c67cb399313b2fe/32/256x256.png" alt="Limbo icon">Limbo</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/8f7858dfa2f4a1887b6e0d3be0aa4f27/32/512x512.png" alt="Little Nightmares I icon">Little Nightmares I</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/52087100703aa4bb69c68aca235831b3/32/256x256.png" alt="Little Nightmares II icon">Little Nightmares II</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/f6b0f09bccf55c1984acfe6da48bacda.png" alt="Maneater icon">Maneater</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/c05225ad3adfb3f4b73a7d7d04d3c2d7.png" alt="Mindustry icon">Mindustry</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/922bf372baea877169976e95e622bff8/32/256x256.png" alt="Muck icon">Muck</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/7a963088b715398a4438ad53935af1cb/32/256x256.png" alt="Peak icon">Peak</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/da9f8cb2cc75986eadbf38bda90442dd/32/256x256.png" alt="Portal 2 icon">Portal 2</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/fbf92581e8e4778a5380ee9a785e015c/32/256x256.png" alt="Rayman Origins icon">Rayman Origins</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/2bb66c8d35cfd655665dad7fe1736859.png" alt="Risk of Rain 2 icon">Risk of Rain 2</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/70ece1e1e0931919438fcfc6bd5f199c/32/256x256.png" alt="Slay the Spire icon">Slay the Spire</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/09fb05dd477d4ae6479985ca56c5a12d/32/256x256.png" alt="Slime Rancher icon">Slime Rancher</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon_thumb/6c5532cd89a43796f19e4ac21f3b8c72.png" alt="The Witcher icon">The Witcher: Розширене видання</li>
+            <li><img class="game-icon" src="https://cdn2.steamgriddb.com/icon/83adc9225e4deb67d7ce42d58fe5157c/32/256x256.png" alt="Warframe icon">Warframe</li>
         </ul>
         </aside>
-    <main class="main">gesgsregsegeges</main>
+    <main class="main">
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/71399508b87c56e586b6aee64cdbc6ed.jpg" class="card-img-top" alt="Dead Cells poster">
+                    <div class="card-body">
+                        <p class="card-text">302,2 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/53376a17d544b3d33d4762831fd89ec5.jpg" class="card-img-top" alt="Terraria poster">
+                    <div class="card-body">
+                        <p class="card-text">68,1 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/399039ad1a8b24219241ea10b387e7b6.jpg" class="card-img-top" alt="Warframe poster">
+                    <div class="card-body">
+                        <p class="card-text">46,1 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/1d4d411238151980dc8c225537101faa.jpg" class="card-img-top" alt="Bloons TD 6 poster">
+                    <div class="card-body">
+                        <p class="card-text">44,8 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/c4b454a1bf1b267ebf093555c096fdb8.jpg" class="card-img-top" alt="Brawlhalla poster">
+                    <div class="card-body">
+                        <p class="card-text">38 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/7db7f6915f70b60fa79f003db8c6a56a.jpg" class="card-img-top" alt="Muck poster">
+                    <div class="card-body">
+                        <p class="card-text">21,4 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/501776beb31cc83ec4f431b35286d162.jpg" class="card-img-top" alt="Maneater poster">
+                    <div class="card-body">
+                        <p class="card-text">18,5 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/ce420da1dae0395f3d31b438a08e15db.jpg" class="card-img-top" alt="Little Nightmares II poster">
+                    <div class="card-body">
+                        <p class="card-text">14,8 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/25c2c7b955a7e2580daa62534486ec09.jpg" class="card-img-top" alt="Blasphemous poster">
+                    <div class="card-body">
+                        <p class="card-text">13,9 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/e62dfd885dcb4b83dda5d4e336fdf520.jpg" class="card-img-top" alt="Slime Rancher poster">
+                    <div class="card-body">
+                        <p class="card-text">11,8 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/cb1a716a70ad58a2f02792dcc8db2039.jpg" class="card-img-top" alt="Rayman Origins poster">
+                    <div class="card-body">
+                        <p class="card-text">10,6 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/9c8d8b6698dd0dc195d35179f7e27543.jpg" class="card-img-top" alt="Deep Rock Galactic poster">
+                    <div class="card-body">
+                        <p class="card-text">7,5 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/9ad067558ea2bd2a1239bfa2da998146.jpg" class="card-img-top" alt="Slay the Spire poster">
+                    <div class="card-body">
+                        <p class="card-text">7,1 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/9ebc0e97da8e0e5083fea7203f194d2b.jpg" class="card-img-top" alt="Portal 2 poster">
+                    <div class="card-body">
+                        <p class="card-text">6,4 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/5376aa42160eadc5d4ec1cf16b82f9cb.jpg" class="card-img-top" alt="CARRION poster">
+                    <div class="card-body">
+                        <p class="card-text">6 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/dc9a4352882c5e50a0f5bd899e69cae7.jpg" class="card-img-top" alt="Clone Drone in the Danger Zone poster">
+                    <div class="card-body">
+                        <p class="card-text">5,3 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/dd7ab8354984c322aeea2a45adac5ecd.jpg" class="card-img-top" alt="Infinitode poster">
+                    <div class="card-body">
+                        <p class="card-text">4,9 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/c39bfb2804dded8db959a0c87d483072.jpg" class="card-img-top" alt="Little Nightmares I poster">
+                    <div class="card-body">
+                        <p class="card-text">4,3 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/5bcf7b504f5cb2b2ad68192efc3983f5.jpg" class="card-img-top" alt="Limbo poster">
+                    <div class="card-body">
+                        <p class="card-text">3,3 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/8c433a09bd26b943147c4d9bacb15efc.jpg" class="card-img-top" alt="Celeste poster">
+                    <div class="card-body">
+                        <p class="card-text">3,2 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/9fad6725914cafe948673da493a02c5b.jpg" class="card-img-top" alt="Hotline Miami poster">
+                    <div class="card-body">
+                        <p class="card-text">3,2 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/1421d7f26f63712f41e4e46140c37180.jpg" class="card-img-top" alt="Risk of Rain 2 poster">
+                    <div class="card-body">
+                        <p class="card-text">2,3 год.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/518b0bc6ec175055a4bca965df70d379.jpg" class="card-img-top" alt="Mindustry poster">
+                    <div class="card-body">
+                        <p class="card-text">71 хв.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/6dc83d2991a673298f4804a5ba075e16.jpg" class="card-img-top" alt="The Binding of Isaac: Rebirth poster">
+                    <div class="card-body">
+                        <p class="card-text">71 хв.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/b48b5d451e507d69b7261347250d7118.jpg" class="card-img-top" alt="Bloody Hell poster">
+                    <div class="card-body">
+                        <p class="card-text">45 хв.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/2c46eff50077ff99ba6e072522812645.jpg" class="card-img-top" alt="The Witcher poster">
+                    <div class="card-body">
+                        <p class="card-text">35 хв.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/18cd17cadbb6ae50f45d48d67f0212d0.jpg" class="card-img-top" alt="Don't Starve Together poster">
+                    <div class="card-body">
+                        <p class="card-text">20 хв.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/e6b2e5d385c1503fbd55b97ba5dc4b77.jpg" class="card-img-top" alt="DOOM poster">
+                    <div class="card-body">
+                        <p class="card-text">15 хв.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/248fc45afe6980b6b520b592ff9de696.jpg" class="card-img-top" alt="Left 4 Dead poster">
+                    <div class="card-body">
+                        <p class="card-text">4 хв.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn2.steamgriddb.com/thumb/b53b8b48c4b228b070851d52800bb9e1.jpg" class="card-img-top" alt="Peak poster">
+                    <div class="card-body">
+                        <p class="card-text">1 хв.</p>
+                    </div>
+                </div>
+
+            </div>
+    </main>
     <footer>
     </footer>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

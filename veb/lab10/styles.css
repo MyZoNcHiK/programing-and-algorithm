@@ -1,5 +1,5 @@
 *{
-    font-family: "Open sans";
+    font-family: "Opens Sans", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -19,26 +19,45 @@ header {
     width: 100%;
     height: 90px;
     z-index: 1000;
-
     background-color: #171d25;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 0.9em;
 }
 header nav:nth-child(1){
-    width: 500px;
+    width: 550px;
     justify-content: space-between;
-    margin: 7px 5px auto auto;
-    font-size: 1.1em;
+    margin: 4px 0px auto auto;
+    font-size: 1.25em;
+}
+#minimaze:hover, #maximaze:hover, #close:hover {
+    padding-top: 20px;
+    margin-top: -20px;
+}
+#big-picture:hover{
+    background-color: #3c434f;
+    color: #dcdcdc;
+}
+#minimaze:hover{
+    background-color: #3d4450;
+}
+#maximaze:hover{
+    background-color: #3d4450;
+    color: #dcdcdc;
+}
+#close:hover{
+    background-color: #e22a27;
+    color: #dcdcdc;
 }
 header nav:nth-child(2){
     justify-content: space-between;
-    font-size: 1em;
+    font-size: 1.2em;
     margin: -1.4em 0 0 10px;
+    font-weight: 400;
 }
 header nav:nth-child(3){
-    font-size: 1.4em;
-    font-weight: 650;
+    font-size: 1.7em;
+    font-weight: 600;
     margin: 0 0 0 10px;
     align-items: center;
     color: #dcdedf;
@@ -111,11 +130,13 @@ nav button:hover{
     color: #dcdedf;
 }
 .sidebar {
+    border-right: 2px black solid;
     width: 350px;
+    font-size: 1.3em;
     height: calc(100vh - 90px);
     z-index: 1000;
     position: fixed;
-    top: 90px;
+    top: 140px;
     left: 0;
     overflow-y: auto;
     background-color: #24282f;
@@ -124,10 +145,11 @@ nav button:hover{
     background-color: #272d37;
     color: #8b929a;
     padding: 0 5px;
+    align-items: center;
     border-radius: 2px;
 }
 #profile-but span{
-    color: #1999ff;
+    color: #44a8e2;
 }
 #horn,
 #notification {
@@ -160,30 +182,34 @@ nav button:hover{
 .colections {
     display: flex;
     align-items: center;
+    font-size: 1.3em;
     background-color: #171d25;
     height: 50px;
+    width: 350px;
     padding: 0 8px;
     gap: 8px;
+    position: fixed;
+    top: 90px;
+    z-index: 1001;
 }
 .colections button:first-child {
     flex: 1;
     height: 40px;
-    background-color: #2a3038;
+    background-color: #3e4047;
     border: none;
-    color: #8b929a;
+    color: #dcdedf;
     text-align: left;
     padding: 0 10px;
     border-radius: 3px;
 }
 .colections button:first-child:hover {
     background-color: #353b45;
-    color: #dcdedf;
 }
 .colections button:last-child {
-    color:#8b929a;
+    color:#4c4d50;
     width: 40px;
     height: 40px;
-    background-color: #2a3038;
+    background-color: #25272d;
     border: none;
     border-radius: 3px;
     display: grid;
@@ -205,20 +231,22 @@ nav button:hover{
     border-radius: 1px;
 }
 .main {
-    margin-top: 90px;
-    background-color: #2d333c;
-    margin-left: 350px;
+    margin: 90px 0 0 350px;
+    background-color: #2c323b;
     height: 100vh;
     overflow-y: auto;
     flex: 1;
 }
 .game-list{
     padding: 0;
+    list-style: none;
 }
 .game-list li{
+    padding: 3px 0;
+    margin: 3px 0;
     color: #92979d;
-    list-style: none;
-    padding-left: 25px;
+    padding-left: 27px;
+    cursor: pointer;
 }
 .game-list li:hover{
     color:#dcdcdc;
@@ -226,12 +254,68 @@ nav button:hover{
 }
 .game-list .category{
     padding-left: 5px;
-    font-size: 1.15em;
+    font-size: 1.10em;
     color: #b4cbe1;
-    list-style:inside;
     background: linear-gradient(90deg,rgba(41, 47, 59, 1) 0%, rgba(36, 40, 47, 1) 100%);
+}
+.game-list .category::before{
+    content: "— ";
+    font-size: 0.8em;
+    font-weight: bold;
 }
 .game-list .category:hover{
     color: #dcdcdc;
     background-color: #323a4b;
+    background: linear-gradient(90deg,#3e4e69  0%, #3e4e69 100%);
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    padding-bottom: 100px;
+}
+.card{
+    border: none;
+    background: none;
+    align-items: center;
+}
+.card-img-top {
+    border-radius: 2px;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+.card-body{
+    background-color: #3d4450;
+    border-radius: 3px;
+    height: fit-content;
+    font-weight: 600;
+    width: 50%;
+    color: #dcdedf;
+    padding: 1px;
+    font-size: 1.2em;
+    margin-top: -1.15em;
+    cursor: default;
+}
+.card-text{
+    text-align: center;
+    white-space: nowrap;
+}
+.game-icon{
+    display: inline;
+    background-color: black;
+    border-radius: 3px;
+    margin-top: -0.2em;
+    margin-right: 7px;
+    height: 1.5em;
+    width: 1.5em;
+    object-fit: cover;
+}
+#profile-icon{
+    height: 1.7em;
+    width: 1.7em;
+    margin-right: 7px;
+    object-fit: cover;
+    border-right: 3px #44a8e2 solid;
 }
