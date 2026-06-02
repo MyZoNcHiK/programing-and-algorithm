@@ -180,6 +180,7 @@ nav button:hover{
     margin: 0;
 }
 .colections {
+    border-right: 2px black solid;
     display: flex;
     align-items: center;
     font-size: 1.3em;
@@ -269,6 +270,9 @@ nav button:hover{
     background: linear-gradient(90deg,#3e4e69  0%, #3e4e69 100%);
 }
 .card-grid{
+    perspective: 1000px;
+    perspective-origin: center;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
@@ -278,7 +282,13 @@ nav button:hover{
 .card{
     border: none;
     background: none;
-    align-items: center;
+    align-items: center;    
+    transform-origin: bottom left right;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
 }
 .card-img-top {
     border-radius: 2px;
@@ -318,4 +328,72 @@ nav button:hover{
     margin-right: 7px;
     object-fit: cover;
     border-right: 3px #44a8e2 solid;
+}
+#newsCarousel{
+    color: #dcdcdc;
+    padding: 20px;
+    background: #2D333C;
+    background: linear-gradient(180deg,rgba(45, 51, 60, 1) 0%, rgba(23, 29, 37, 1) 80%);
+}
+.news-conteiner img{
+    height: 15em;
+    width: 28em;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.news-conteiner time{
+    color: #767b80;
+    font-size: 1.15em;
+}
+.news-conteiner figure{
+    margin: 3px 0;
+}
+.news-game-but {
+    height: 1.5em;
+    padding-right: 10px;
+    border-radius: 2px;
+    font-size: 1.2em;
+    font-weight: 300;
+    background-color: #292e36;
+    color: #8b929a;
+    border: none;
+    line-height:normal;
+    margin-bottom: 20px;
+}
+.news-game-but img{
+    width: 1.5em;
+    height: 1.5em;
+    object-fit: cover;
+    background-color:  black;
+    border: none;
+    margin: 0 6px 0 0;
+    vertical-align: center;
+    border-radius: 3px;
+}
+.news-conteiner figcaption{
+    margin-top: 2px;
+    font-size: 1.5em;
+    color: #adb0b3;
+}
+.carousel-control-prev, .carousel-control-next{
+    margin-left: auto;
+    position: relative;
+    display: inline;
+    height: 3em;
+    width: 3em;
+    left: auto;
+}
+.carousel-control-next{
+    margin-left: 0;
+}
+#news-setting{
+    margin-top: 0.3em;
+    width: 1.8em;
+    height: 1.8em;
+    display: inline;
+    color: #96999d;
+    cursor: pointer;
+}
+#news-setting:hover{
+    color: #dcdcdc;
 }
